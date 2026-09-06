@@ -11,9 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
-    /* ═══════════════════════════════════════
-       DESIGN TOKENS
-    ═══════════════════════════════════════ */
+
     :root {
         --navy:        #0d1b38;
         --navy-mid:    #162445;
@@ -61,9 +59,7 @@
         line-height: 1.5;
     }
 
-    /* ═══════════════════════════════════════
-       AUTH SCREEN
-    ═══════════════════════════════════════ */
+
     #auth-screen {
         position: fixed; inset: 0;
         background: linear-gradient(135deg, #0d1b38 0%, #162b5c 50%, #1a3a7a 100%);
@@ -240,7 +236,7 @@
         padding-top: 14px;
     }
 
-    /* Current user bar at top of app */
+
     .user-bar {
         display: flex; align-items: center; gap: 8px;
         padding: 6px 10px; border-radius: var(--r-sm);
@@ -264,7 +260,7 @@
     .user-bar-email { font-size: 10px; color: #4d6080; }
     .user-bar-sign { font-size: 11px; color: #4d6080; margin-left: 4px; }
 
-    /* Sync indicator */
+
     .sync-dot {
         width: 7px; height: 7px; border-radius: 50%;
         background: var(--green); flex-shrink: 0;
@@ -278,9 +274,7 @@
 
     @keyframes pulse { 0%,100%{opacity:1}50%{opacity:.4} }
 
-    /* ═══════════════════════════════════════
-       SIDEBAR
-    ═══════════════════════════════════════ */
+
     .sidebar {
         width: var(--sidebar-w);
         background: var(--navy);
@@ -355,9 +349,7 @@
 
     .signout-btn:hover { background: rgba(220,38,38,.18); }
 
-    /* ═══════════════════════════════════════
-       MAIN LAYOUT
-    ═══════════════════════════════════════ */
+
     .main { margin-left: var(--sidebar-w); flex: 1; min-width: 0; }
 
     .topbar {
@@ -374,9 +366,7 @@
     .topbar-left p  { font-size: 12px; color: var(--text-3); margin-top: 1px; }
     .topbar-right   { display: flex; gap: 9px; align-items: center; }
 
-    /* ═══════════════════════════════════════
-       PAGES
-    ═══════════════════════════════════════ */
+
     .page { display: none; padding: 26px 28px 48px; }
     .page.active { display: block; animation: pgIn .18s ease; }
 
@@ -385,9 +375,7 @@
         to   { opacity: 1; transform: translateY(0); }
     }
 
-    /* ═══════════════════════════════════════
-       STATS ROW
-    ═══════════════════════════════════════ */
+
     .stats-row {
         display: grid; grid-template-columns: repeat(4, 1fr);
         gap: 14px; margin-bottom: 22px;
@@ -418,9 +406,7 @@
     .chip-amber  { background: var(--amber-light);  color: var(--amber); }
     .chip-purple { background: var(--purple-light); color: var(--purple); }
 
-    /* ═══════════════════════════════════════
-       CARD
-    ═══════════════════════════════════════ */
+
     .card {
         background: var(--surface);
         border: 1px solid var(--border);
@@ -443,9 +429,7 @@
     .card-hd h3 i { color: var(--blue); font-size: 13px; }
     .card-bd { padding: 20px; }
 
-    /* ═══════════════════════════════════════
-       TABLE
-    ═══════════════════════════════════════ */
+
     .tbl-wrap { overflow-x: auto; }
     table { width: 100%; border-collapse: collapse; }
 
@@ -495,9 +479,7 @@
     .mono { font-family: 'DM Mono', monospace; font-size: 12.5px; color: var(--text-3); }
     .peso { font-family: 'DM Mono', monospace; font-weight: 500; color: var(--gold); }
 
-    /* ═══════════════════════════════════════
-       BUTTONS
-    ═══════════════════════════════════════ */
+
     .btn {
         display: inline-flex; align-items: center; gap: 6px;
         padding: 8px 15px; border-radius: var(--r-sm);
@@ -525,9 +507,7 @@
     .btn-ico { width: 30px; height: 30px; padding: 0; justify-content: center; border-radius: 6px; }
     .btn-row { display: flex; gap: 8px; flex-wrap: wrap; }
 
-    /* ═══════════════════════════════════════
-       BADGE
-    ═══════════════════════════════════════ */
+
     .badge {
         display: inline-flex; align-items: center; gap: 5px;
         padding: 4px 10px; border-radius: 100px;
@@ -537,9 +517,7 @@
     .badge-blue  { background: var(--blue-light);  color: var(--blue); }
     .badge-green { background: var(--green-light); color: var(--green); }
 
-    /* ═══════════════════════════════════════
-       FORM
-    ═══════════════════════════════════════ */
+
     .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
     .fg { display: flex; flex-direction: column; gap: 5px; }
     .fg.span2 { grid-column: 1/-1; }
@@ -557,9 +535,7 @@
     .field:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(26,82,232,.1); }
     .field::placeholder { color: var(--text-3); }
 
-    /* ═══════════════════════════════════════
-       SEGMENTED TOGGLE
-    ═══════════════════════════════════════ */
+
     .seg { display: flex; gap: 7px; margin-bottom: 16px; }
 
     .seg-btn {
@@ -573,9 +549,7 @@
     .seg-btn:hover { border-color: var(--blue); color: var(--blue); }
     .seg-btn.on { border-color: var(--blue); background: var(--blue-light); color: var(--blue); }
 
-    /* ═══════════════════════════════════════
-       ALERT
-    ═══════════════════════════════════════ */
+
     .alert {
         padding: 10px 14px; border-radius: var(--r-sm);
         font-size: 13px; font-weight: 500;
@@ -587,9 +561,7 @@
     .alert-info { background: var(--blue-light);  color: #1e3a8a; }
     .alert-warn { background: var(--amber-light); color: #78350f; }
 
-    /* ═══════════════════════════════════════
-       PAYSLIP
-    ═══════════════════════════════════════ */
+
     .slip {
         border: 1px solid var(--border); border-radius: var(--r);
         overflow: hidden; margin-bottom: 16px;
@@ -667,9 +639,7 @@
 
     .slip-sec { margin-bottom: 14px; }
 
-    /* ═══════════════════════════════════════
-       AUDIT LOG
-    ═══════════════════════════════════════ */
+
     .audit-item {
         display: flex; gap: 12px; padding: 10px 0;
         border-bottom: 1px solid var(--border-soft);
@@ -685,17 +655,13 @@
     .audit-action { font-size: 13px; color: var(--text-1); line-height: 1.4; }
     .audit-time   { font-size: 10.5px; color: var(--text-3); margin-top: 2px; }
 
-    /* ═══════════════════════════════════════
-       EMPTY STATE
-    ═══════════════════════════════════════ */
+
     .empty { text-align: center; padding: 40px 20px; color: var(--text-3); }
     .empty i { font-size: 34px; opacity: .2; margin-bottom: 10px; display: block; }
     .empty p { font-size: 13.5px; }
     .empty a { color: var(--blue); font-weight: 600; text-decoration: none; }
 
-    /* ═══════════════════════════════════════
-       SEARCH RESULT PANEL
-    ═══════════════════════════════════════ */
+
     .found-panel { border: 1px solid var(--border); border-radius: var(--r); overflow: hidden; box-shadow: var(--shadow); }
 
     .found-head {
@@ -715,9 +681,7 @@
     .found-item label { display: block; font-size: 10.5px; font-weight: 700; color: var(--text-3); letter-spacing: .08em; margin-bottom: 2px; }
     .found-item span  { font-size: 14px; font-weight: 600; }
 
-    /* ═══════════════════════════════════════
-       PRINT
-    ═══════════════════════════════════════ */
+
     @media print {
         .sidebar, .topbar, .btn-row, .period-bar, .card-hd .btn-row { display: none !important; }
         .main { margin-left: 0 !important; }
@@ -732,13 +696,12 @@
     ::-webkit-scrollbar-track { background: transparent; }
     ::-webkit-scrollbar-thumb { background: #c5d0e0; border-radius: 10px; }
 
-    /* Hide main app until logged in */
+
     #app-wrap { display: none; width: 100%; }
     </style>
 </head>
 <body>
 
-<!-- ══════════════════════ AUTH SCREEN ══════════════════════ -->
 <div id="auth-screen">
     <div class="auth-card">
         <div class="auth-header">
@@ -757,7 +720,7 @@
         </div>
 
         <div class="auth-body">
-            <!-- SIGN IN -->
+
             <div class="auth-panel active" id="panel-signin">
                 <div id="signin-msg"></div>
                 <div class="auth-fg">
@@ -787,7 +750,7 @@
                 </p>
             </div>
 
-            <!-- SIGN UP -->
+
             <div class="auth-panel" id="panel-signup">
                 <div id="signup-msg"></div>
                 <div class="auth-fg">
@@ -830,10 +793,9 @@
     </div>
 </div>
 
-<!-- ══════════════════════ APP ══════════════════════ -->
 <div id="app-wrap">
 
-    <!-- SIDEBAR -->
+
     <aside class="sidebar">
         <div class="sb-logo">
             <div class="sb-logo-icon"><i class="fas fa-peso-sign"></i></div>
@@ -874,7 +836,7 @@
             </div>
         </nav>
 
-        <!-- Logged-in user block -->
+
         <div class="sb-user">
             <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
                 <div class="sync-dot" id="sync-dot"></div>
@@ -898,10 +860,10 @@
         </div>
     </aside>
 
-    <!-- MAIN -->
+
     <main class="main">
 
-        <!-- TOPBAR -->
+
         <div class="topbar">
             <div class="topbar-left">
                 <h2 id="pg-title">Dashboard</h2>
@@ -917,7 +879,7 @@
             </div>
         </div>
 
-        <!-- ════ DASHBOARD ════ -->
+
         <div class="page active" id="page-dashboard">
             <div class="stats-row">
                 <div class="stat-tile">
@@ -972,7 +934,7 @@
             </div>
         </div>
 
-        <!-- ════ ALL EMPLOYEES ════ -->
+
         <div class="page" id="page-employees">
             <div class="card">
                 <div class="card-hd">
@@ -1000,7 +962,7 @@
             </div>
         </div>
 
-        <!-- ════ ADD EMPLOYEE ════ -->
+
         <div class="page" id="page-add">
             <div class="card" style="max-width:580px;">
                 <div class="card-hd">
@@ -1066,7 +1028,7 @@
             </div>
         </div>
 
-        <!-- ════ SEARCH ════ -->
+
         <div class="page" id="page-search">
             <div class="card" style="max-width:600px;">
                 <div class="card-hd">
@@ -1096,7 +1058,7 @@
             </div>
         </div>
 
-        <!-- ════ PROCESS PAYROLL ════ -->
+
         <div class="page" id="page-payroll">
             <div class="card" style="max-width:820px;">
                 <div class="card-hd">
@@ -1121,7 +1083,7 @@
             </div>
         </div>
 
-        <!-- ════ PAYSLIP HISTORY ════ -->
+
         <div class="page" id="page-history">
             <div class="card" style="max-width:720px;">
                 <div class="card-hd">
@@ -1141,7 +1103,7 @@
             </div>
         </div>
 
-        <!-- ════ AUDIT LOG ════ -->
+
         <div class="page" id="page-audit">
             <div class="card" style="max-width:700px;">
                 <div class="card-hd">
@@ -1155,21 +1117,9 @@
         </div>
 
     </main>
-</div><!-- #app-wrap -->
+</div>
 
-
-<!-- ══════════════════════ FIREBASE ══════════════════════ -->
 <script type="module">
-/*
- * ════════════════════════════════════════════════════════════
- *  PayrollPH — Firebase Backend Integration
- *
- *  Firebase services used:
- *    Authentication  → sign up / sign in / sign out
- *    Realtime DB     → store employees, payslips, audit log
- *                      scoped per user: /users/{uid}/...
- * ════════════════════════════════════════════════════════════
- */
 
 import { initializeApp }            from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js';
 import { getAuth,
@@ -1182,7 +1132,6 @@ import { getDatabase,
          ref, set, get, remove,
          onValue, push }             from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js';
 
-/* ── Firebase config (your project) ── */
 const firebaseConfig = {
     apiKey:            "AIzaSyAt09lOFjgkW8VIqqTvgtgzCvjYBXtX9wQ",
     authDomain:        "payroll-5515e.firebaseapp.com",
@@ -1197,11 +1146,6 @@ const app  = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const rtdb = getDatabase(app);
 
-/* ────────────────────────────────────────
-   AUTH HELPERS
-──────────────────────────────────────── */
-
-/* Switch between Sign In / Sign Up tabs */
 window.switchTab = (tab) => {
     document.getElementById('panel-signin').classList.toggle('active', tab === 'signin');
     document.getElementById('panel-signup').classList.toggle('active', tab === 'signup');
@@ -1229,7 +1173,6 @@ function setLoading(btnId, loading) {
     }
 }
 
-/* SIGN UP */
 window.doSignUp = async () => {
     const name  = document.getElementById('su-name').value.trim();
     const email = document.getElementById('su-email').value.trim();
@@ -1245,7 +1188,7 @@ window.doSignUp = async () => {
         const cred = await createUserWithEmailAndPassword(auth, email, pass);
         await updateProfile(cred.user, { displayName: name });
         authMsg('signup-msg', 'ok', 'Account created! Signing you in…');
-        /* onAuthStateChanged fires automatically → launches app */
+
     } catch (err) {
         authMsg('signup-msg', 'err', friendlyError(err.code));
         document.getElementById('signup-btn').disabled = false;
@@ -1253,7 +1196,6 @@ window.doSignUp = async () => {
     }
 };
 
-/* SIGN IN */
 window.doSignIn = async () => {
     const email = document.getElementById('si-email').value.trim();
     const pass  = document.getElementById('si-pass').value;
@@ -1264,7 +1206,7 @@ window.doSignIn = async () => {
     setLoading('signin-btn', true);
     try {
         await signInWithEmailAndPassword(auth, email, pass);
-        /* onAuthStateChanged fires automatically */
+
     } catch (err) {
         authMsg('signin-msg', 'err', friendlyError(err.code));
         document.getElementById('signin-btn').disabled = false;
@@ -1272,7 +1214,6 @@ window.doSignIn = async () => {
     }
 };
 
-/* SIGN OUT */
 window.doSignOut = async () => {
     if (!confirm('Sign out of PayrollPH?')) return;
     await signOut(auth);
@@ -1292,13 +1233,9 @@ function friendlyError(code) {
     return map[code] || `Error: ${code}`;
 }
 
-/* ────────────────────────────────────────
-   AUTH STATE LISTENER
-   Fires whenever login state changes.
-──────────────────────────────────────── */
 onAuthStateChanged(auth, async (user) => {
     if (user) {
-        /* Refresh displayName in case just signed up */
+
         await user.reload();
         const fresh = auth.currentUser;
 
@@ -1309,14 +1246,11 @@ onAuthStateChanged(auth, async (user) => {
     }
 });
 
-/* ────────────────────────────────────────
-   SHOW / HIDE SCREENS
-──────────────────────────────────────── */
 function showApp(user) {
     document.getElementById('auth-screen').style.display = 'none';
     document.getElementById('app-wrap').style.display    = 'flex';
 
-    /* Populate sidebar user info */
+
     const name = user.displayName || user.email;
     document.getElementById('sb-name').textContent  = name;
     document.getElementById('sb-email').textContent = user.email;
@@ -1328,20 +1262,13 @@ function showApp(user) {
 function showAuth() {
     document.getElementById('auth-screen').style.display = 'flex';
     document.getElementById('app-wrap').style.display    = 'none';
-    /* Reset button labels */
+
     document.getElementById('signin-btn').disabled = false;
     document.getElementById('signin-btn').innerHTML = '<i class="fas fa-right-to-bracket"></i> Sign In';
     document.getElementById('signup-btn').disabled = false;
     document.getElementById('signup-btn').innerHTML = '<i class="fas fa-user-plus"></i> Create Account';
 }
 
-/* ────────────────────────────────────────
-   REALTIME DATABASE — LOAD + SYNC
-   Path structure: /users/{uid}/employees
-                   /users/{uid}/payslips
-                   /users/{uid}/audit
-                   /users/{uid}/runs
-──────────────────────────────────────── */
 let uid = null;
 
 async function loadUserData(userUid) {
@@ -1351,17 +1278,17 @@ async function loadUserData(userUid) {
 
     const userRef = ref(rtdb, `users/${uid}`);
 
-    /* Live listener — updates UI whenever DB changes */
+
     onValue(userRef, (snapshot) => {
         const data = snapshot.val() || {};
 
-        /* Employees */
+
         db.employees = [];
         if (data.employees) {
             Object.values(data.employees).forEach(emp => db.employees.push(emp));
         }
 
-        /* Payslips */
+
         db.slips = {};
         if (data.payslips) {
             Object.entries(data.payslips).forEach(([empId, slipMap]) => {
@@ -1369,19 +1296,19 @@ async function loadUserData(userUid) {
             });
         }
 
-        /* Audit log */
+
         db.audit = [];
         if (data.audit) {
             db.audit = Object.values(data.audit);
         }
 
-        /* Run counter */
+
         db.runs = data.runs || 0;
 
         syncBadge();
         setSyncState('ok');
 
-        /* Refresh current visible page */
+
         const activePage = document.querySelector('.page.active');
         if (activePage) {
             const id = activePage.id.replace('page-', '');
@@ -1405,7 +1332,6 @@ function setSyncState(state) {
     }
 }
 
-/* ── Write helpers ── */
 async function saveEmployee(emp) {
     setSyncState('syncing');
     await set(ref(rtdb, `users/${uid}/employees/${emp.id}`), emp);
@@ -1435,10 +1361,6 @@ async function saveRunCount(n) {
     await set(ref(rtdb, `users/${uid}/runs`), n);
 }
 
-/* ════════════════════════════════════════════════════════════
-   PAYROLL SYSTEM LOGIC (same as original — now cloud-backed)
-═══════════════════════════════════════════════════════════ */
-
 const SSS_RATE    = 0.045,  SSS_CAP    = 900;
 const PH_RATE     = 0.025;
 const PGIBIG_RATE = 0.02,   PGIBIG_CAP = 100;
@@ -1455,7 +1377,6 @@ const META = {
     audit     : ['Audit Log',       'All system events recorded — most recent first (Stack)']
 };
 
-/* Navigation */
 window.go = id => showPage(id);
 
 function showPage(id) {
@@ -1478,7 +1399,6 @@ document.querySelectorAll('.sb-item').forEach(el => {
     el.addEventListener('click', () => showPage(el.dataset.page));
 });
 
-/* Deductions */
 function computeDeductions(gross) {
     const sss    = Math.min(gross * SSS_RATE,    SSS_CAP);
     const ph     = gross * PH_RATE;
@@ -1497,7 +1417,6 @@ function withholdingTax(gp) {
 
 const gross = e => e.type === 'ft' ? e.monthly + e.allow : e.hrate * e.hrs;
 
-/* Add Employee */
 let empType = 'ft';
 
 window.setType = (t) => {
@@ -1552,7 +1471,6 @@ window.clearForm = () => {
     document.getElementById('f-allow').value = '0';
 };
 
-/* Remove Employee */
 window.removeEmployee = async (id) => {
     const idx = db.employees.findIndex(e => e.id === id);
     if (idx === -1) return;
@@ -1563,7 +1481,6 @@ window.removeEmployee = async (id) => {
     flash('emp-alert', 'ok', `"${name}" was removed.`);
 };
 
-/* Sort — Merge Sort */
 window.doSort = async () => {
     db.employees = mergeSort([...db.employees], 'name');
     await logAction('SORTED: All employees sorted alphabetically (Merge Sort)');
@@ -1590,7 +1507,6 @@ function merge(L, R, key) {
     return out;
 }
 
-/* Search */
 let srchMode = 'name';
 
 window.setSrch = (m) => {
@@ -1673,7 +1589,6 @@ window.doSearch = () => {
     </div>`;
 };
 
-/* Process Payroll */
 window.runPayroll = async () => {
     if (!db.employees.length)
         return flash('pay-alert', 'err', 'No employees to process. Add employees first.');
@@ -1773,7 +1688,6 @@ function renderSlip({ emp, period, gross: g, ded, net }) {
     </div>`;
 }
 
-/* Payslip History */
 function redrawHistSel() {
     const sel  = document.getElementById('hist-sel');
     const prev = sel.value;
@@ -1796,7 +1710,6 @@ window.viewHistory = () => {
     out.innerHTML = records.map(s => renderSlip(s)).join('');
 };
 
-/* Audit Log */
 async function logAction(action) {
     const entry = { action, time: nowStr() };
     db.audit.push(entry);
@@ -1818,7 +1731,6 @@ function redrawAudit() {
         </div>`).join('');
 }
 
-/* Dashboard + Employee Table */
 function redrawDash() {
     const ft = db.employees.filter(e => e.type==='ft').length;
     const pt = db.employees.filter(e => e.type==='pt').length;
@@ -1877,7 +1789,6 @@ function redrawEmpTable() {
         </tr>`).join('');
 }
 
-/* Utilities */
 const p    = n   => '₱' + n.toLocaleString('en-PH', { minimumFractionDigits:2, maximumFractionDigits:2 });
 const fv   = id  => document.getElementById(id)?.value ?? '';
 const showEl = (id, vis) => { const el = document.getElementById(id); if (el) el.style.display = vis ? '' : 'none'; };
@@ -1912,7 +1823,6 @@ function syncBadge() {
         `<i class="fas fa-users"></i> ${n} Employee${n!==1?'s':''}`;
 }
 
-/* Note: sample data is removed — all data now comes from Firebase per user */
 document.getElementById('pay-period').value = 'August 2026';
 
 </script>
