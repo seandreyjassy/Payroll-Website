@@ -59,7 +59,6 @@
         line-height: 1.5;
     }
 
-
     #auth-screen {
         position: fixed; inset: 0;
         background: linear-gradient(135deg, #0d1b38 0%, #162b5c 50%, #1a3a7a 100%);
@@ -236,7 +235,6 @@
         padding-top: 14px;
     }
 
-
     .user-bar {
         display: flex; align-items: center; gap: 8px;
         padding: 6px 10px; border-radius: var(--r-sm);
@@ -260,7 +258,6 @@
     .user-bar-email { font-size: 10px; color: #4d6080; }
     .user-bar-sign { font-size: 11px; color: #4d6080; margin-left: 4px; }
 
-
     .sync-dot {
         width: 7px; height: 7px; border-radius: 50%;
         background: var(--green); flex-shrink: 0;
@@ -273,7 +270,6 @@
     }
 
     @keyframes pulse { 0%,100%{opacity:1}50%{opacity:.4} }
-
 
     .sidebar {
         width: var(--sidebar-w);
@@ -349,7 +345,6 @@
 
     .signout-btn:hover { background: rgba(220,38,38,.18); }
 
-
     .main { margin-left: var(--sidebar-w); flex: 1; min-width: 0; }
 
     .topbar {
@@ -366,7 +361,6 @@
     .topbar-left p  { font-size: 12px; color: var(--text-3); margin-top: 1px; }
     .topbar-right   { display: flex; gap: 9px; align-items: center; }
 
-
     .page { display: none; padding: 26px 28px 48px; }
     .page.active { display: block; animation: pgIn .18s ease; }
 
@@ -374,7 +368,6 @@
         from { opacity: 0; transform: translateY(7px); }
         to   { opacity: 1; transform: translateY(0); }
     }
-
 
     .stats-row {
         display: grid; grid-template-columns: repeat(4, 1fr);
@@ -406,7 +399,6 @@
     .chip-amber  { background: var(--amber-light);  color: var(--amber); }
     .chip-purple { background: var(--purple-light); color: var(--purple); }
 
-
     .card {
         background: var(--surface);
         border: 1px solid var(--border);
@@ -428,7 +420,6 @@
 
     .card-hd h3 i { color: var(--blue); font-size: 13px; }
     .card-bd { padding: 20px; }
-
 
     .tbl-wrap { overflow-x: auto; }
     table { width: 100%; border-collapse: collapse; }
@@ -479,7 +470,6 @@
     .mono { font-family: 'DM Mono', monospace; font-size: 12.5px; color: var(--text-3); }
     .peso { font-family: 'DM Mono', monospace; font-weight: 500; color: var(--gold); }
 
-
     .btn {
         display: inline-flex; align-items: center; gap: 6px;
         padding: 8px 15px; border-radius: var(--r-sm);
@@ -507,7 +497,6 @@
     .btn-ico { width: 30px; height: 30px; padding: 0; justify-content: center; border-radius: 6px; }
     .btn-row { display: flex; gap: 8px; flex-wrap: wrap; }
 
-
     .badge {
         display: inline-flex; align-items: center; gap: 5px;
         padding: 4px 10px; border-radius: 100px;
@@ -516,7 +505,6 @@
 
     .badge-blue  { background: var(--blue-light);  color: var(--blue); }
     .badge-green { background: var(--green-light); color: var(--green); }
-
 
     .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
     .fg { display: flex; flex-direction: column; gap: 5px; }
@@ -535,7 +523,6 @@
     .field:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(26,82,232,.1); }
     .field::placeholder { color: var(--text-3); }
 
-
     .seg { display: flex; gap: 7px; margin-bottom: 16px; }
 
     .seg-btn {
@@ -549,7 +536,6 @@
     .seg-btn:hover { border-color: var(--blue); color: var(--blue); }
     .seg-btn.on { border-color: var(--blue); background: var(--blue-light); color: var(--blue); }
 
-
     .alert {
         padding: 10px 14px; border-radius: var(--r-sm);
         font-size: 13px; font-weight: 500;
@@ -560,7 +546,6 @@
     .alert-err  { background: var(--red-light);   color: #7f1d1d; }
     .alert-info { background: var(--blue-light);  color: #1e3a8a; }
     .alert-warn { background: var(--amber-light); color: #78350f; }
-
 
     .slip {
         border: 1px solid var(--border); border-radius: var(--r);
@@ -639,7 +624,6 @@
 
     .slip-sec { margin-bottom: 14px; }
 
-
     .audit-item {
         display: flex; gap: 12px; padding: 10px 0;
         border-bottom: 1px solid var(--border-soft);
@@ -655,12 +639,10 @@
     .audit-action { font-size: 13px; color: var(--text-1); line-height: 1.4; }
     .audit-time   { font-size: 10.5px; color: var(--text-3); margin-top: 2px; }
 
-
     .empty { text-align: center; padding: 40px 20px; color: var(--text-3); }
     .empty i { font-size: 34px; opacity: .2; margin-bottom: 10px; display: block; }
     .empty p { font-size: 13.5px; }
     .empty a { color: var(--blue); font-weight: 600; text-decoration: none; }
-
 
     .found-panel { border: 1px solid var(--border); border-radius: var(--r); overflow: hidden; box-shadow: var(--shadow); }
 
@@ -681,7 +663,6 @@
     .found-item label { display: block; font-size: 10.5px; font-weight: 700; color: var(--text-3); letter-spacing: .08em; margin-bottom: 2px; }
     .found-item span  { font-size: 14px; font-weight: 600; }
 
-
     @media print {
         .sidebar, .topbar, .btn-row, .period-bar, .card-hd .btn-row { display: none !important; }
         .main { margin-left: 0 !important; }
@@ -695,7 +676,6 @@
     ::-webkit-scrollbar { width: 5px; height: 5px; }
     ::-webkit-scrollbar-track { background: transparent; }
     ::-webkit-scrollbar-thumb { background: #c5d0e0; border-radius: 10px; }
-
 
     #app-wrap { display: none; width: 100%; }
     </style>
@@ -750,7 +730,6 @@
                 </p>
             </div>
 
-
             <div class="auth-panel" id="panel-signup">
                 <div id="signup-msg"></div>
                 <div class="auth-fg">
@@ -795,7 +774,6 @@
 
 <div id="app-wrap">
 
-
     <aside class="sidebar">
         <div class="sb-logo">
             <div class="sb-logo-icon"><i class="fas fa-peso-sign"></i></div>
@@ -836,7 +814,6 @@
             </div>
         </nav>
 
-
         <div class="sb-user">
             <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
                 <div class="sync-dot" id="sync-dot"></div>
@@ -860,9 +837,7 @@
         </div>
     </aside>
 
-
     <main class="main">
-
 
         <div class="topbar">
             <div class="topbar-left">
@@ -878,7 +853,6 @@
                 </button>
             </div>
         </div>
-
 
         <div class="page active" id="page-dashboard">
             <div class="stats-row">
@@ -934,7 +908,6 @@
             </div>
         </div>
 
-
         <div class="page" id="page-employees">
             <div class="card">
                 <div class="card-hd">
@@ -961,7 +934,6 @@
                 </div>
             </div>
         </div>
-
 
         <div class="page" id="page-add">
             <div class="card" style="max-width:580px;">
@@ -1028,7 +1000,6 @@
             </div>
         </div>
 
-
         <div class="page" id="page-search">
             <div class="card" style="max-width:600px;">
                 <div class="card-hd">
@@ -1058,7 +1029,6 @@
             </div>
         </div>
 
-
         <div class="page" id="page-payroll">
             <div class="card" style="max-width:820px;">
                 <div class="card-hd">
@@ -1083,7 +1053,6 @@
             </div>
         </div>
 
-
         <div class="page" id="page-history">
             <div class="card" style="max-width:720px;">
                 <div class="card-hd">
@@ -1102,7 +1071,6 @@
                 </div>
             </div>
         </div>
-
 
         <div class="page" id="page-audit">
             <div class="card" style="max-width:700px;">
@@ -1250,7 +1218,6 @@ function showApp(user) {
     document.getElementById('auth-screen').style.display = 'none';
     document.getElementById('app-wrap').style.display    = 'flex';
 
-
     const name = user.displayName || user.email;
     document.getElementById('sb-name').textContent  = name;
     document.getElementById('sb-email').textContent = user.email;
@@ -1278,16 +1245,13 @@ async function loadUserData(userUid) {
 
     const userRef = ref(rtdb, `users/${uid}`);
 
-
     onValue(userRef, (snapshot) => {
         const data = snapshot.val() || {};
-
 
         db.employees = [];
         if (data.employees) {
             Object.values(data.employees).forEach(emp => db.employees.push(emp));
         }
-
 
         db.slips = {};
         if (data.payslips) {
@@ -1296,18 +1260,15 @@ async function loadUserData(userUid) {
             });
         }
 
-
         db.audit = [];
         if (data.audit) {
             db.audit = Object.values(data.audit);
         }
 
-
         db.runs = data.runs || 0;
 
         syncBadge();
         setSyncState('ok');
-
 
         const activePage = document.querySelector('.page.active');
         if (activePage) {
