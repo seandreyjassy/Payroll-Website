@@ -60,29 +60,24 @@
 
     #auth-screen {
         position: fixed; inset: 0;
-        background: linear-gradient(135deg, #0d1b38 0%, #162b5c 50%, #1a3a7a 100%);
+        background: #f4f6f8;
         display: flex; align-items: center; justify-content: center;
         z-index: 9999;
         padding: 20px;
     }
 
     #auth-screen::before {
-        content: '';
-        position: absolute; inset: 0;
-        background:
-            radial-gradient(ellipse 60% 50% at 20% 30%, rgba(26,82,232,.18) 0%, transparent 60%),
-            radial-gradient(ellipse 40% 60% at 80% 70%, rgba(196,147,63,.10) 0%, transparent 60%);
-        pointer-events: none;
+        display: none;
     }
 
     .auth-card {
         background: var(--surface);
-        border-radius: 16px;
+        border-radius: 10px;
         width: 100%; max-width: 420px;
-        box-shadow: 0 24px 55px rgba(0,0,0,.38), 0 14px 28px rgba(0,0,0,.22), 0 0 0 1px rgba(13,27,56,.18);
+        box-shadow: 0 8px 24px rgba(13,27,56,.08);
         overflow: hidden;
         position: relative;
-        border: 1px solid rgba(13,27,56,.16);
+        border: 1px solid var(--border);
         z-index: 1;
         animation: authIn .3s cubic-bezier(.16,1,.3,1);
     }
@@ -92,48 +87,29 @@
         to   { opacity: 1; transform: translateY(0) scale(1); }
     }
 
-    .auth-card::before,
-    .auth-card::after {
-        content: '';
-        position: absolute;
-        pointer-events: none;
-        z-index: 3;
-    }
-
-    .auth-card::before {
-        inset: 0;
-        border-radius: 16px;
-        box-shadow: inset 0 0 0 1px rgba(255,255,255,.18), inset 18px 18px 28px -28px rgba(13,27,56,.55), inset -18px -18px 28px -28px rgba(13,27,56,.45);
-    }
-
-    .auth-card::after {
-        inset: 0;
-        border-radius: 16px;
-        box-shadow: inset 12px 12px 20px -22px rgba(13,27,56,.7), inset -12px 12px 20px -22px rgba(13,27,56,.7), inset 12px -12px 20px -22px rgba(13,27,56,.7), inset -12px -12px 20px -22px rgba(13,27,56,.7);
-    }
-
     .auth-header {
-        background: linear-gradient(135deg, #0d1b38 0%, #162b5c 100%);
+        background: var(--surface);
         padding: 28px 32px 24px;
-        border-bottom: 2px solid var(--gold);
+        border-bottom: 1px solid var(--border);
         text-align: center;
     }
 
     .auth-logo {
-        width: 52px; height: 52px; border-radius: 13px;
-        background: linear-gradient(135deg, var(--blue) 0%, #5b3fd4 100%);
+        width: 58px; height: 58px; border-radius: 16px;
+        background: linear-gradient(145deg, #0d1b38 0%, #1a3a7a 100%);
         display: inline-flex; align-items: center; justify-content: center;
-        font-size: 22px; color: #fff;
-        box-shadow: 0 6px 20px rgba(26,82,232,.5);
-        margin-bottom: 14px;
+        font-size: 24px; color: #f3c969;
+        margin-bottom: 15px;
+        border: 1px solid rgba(196,147,63,.55);
+        box-shadow: 0 8px 20px rgba(13,27,56,.2), inset 0 1px 0 rgba(255,255,255,.16);
     }
 
     .auth-header h1 {
-        font-size: 22px; font-weight: 700; color: #fff; letter-spacing: .01em;
+        font-size: 22px; font-weight: 700; color: var(--text-1); letter-spacing: .01em;
     }
 
     .auth-header p {
-        font-size: 12.5px; color: rgba(255,255,255,.45); margin-top: 4px;
+        font-size: 12.5px; color: var(--text-3); margin-top: 4px;
     }
 
     .auth-tabs {
@@ -303,21 +279,22 @@
     }
 
     .sb-logo {
-        padding: 20px 18px;
+        padding: 18px 16px;
         border-bottom: 1px solid rgba(255,255,255,.06);
         display: flex; align-items: center; gap: 11px;
     }
 
     .sb-logo-icon {
-        width: 38px; height: 38px; border-radius: 9px; flex-shrink: 0;
-        background: linear-gradient(135deg, var(--blue) 0%, #5b3fd4 100%);
+        width: 42px; height: 42px; border-radius: 12px; flex-shrink: 0;
+        background: linear-gradient(145deg, #1a3a7a 0%, #0d1b38 100%);
         display: flex; align-items: center; justify-content: center;
-        font-size: 15px; color: #fff;
-        box-shadow: 0 4px 14px rgba(26,82,232,.5);
+        font-size: 17px; color: #f3c969;
+        border: 1px solid rgba(196,147,63,.55);
+        box-shadow: 0 5px 16px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.14);
     }
 
-    .sb-logo-text h1 { font-size: 14.5px; font-weight: 700; color: #fff; line-height: 1.2; }
-    .sb-logo-text p  { font-size: 10.5px; color: #3d5070; margin-top: 1px; }
+    .sb-logo-text h1 { font-size: 14px; font-weight: 700; color: #fff; line-height: 1.2; letter-spacing: .01em; }
+    .sb-logo-text p  { font-size: 10px; color: #8fa4c3; margin-top: 2px; }
 
     .sb-nav { padding: 10px 10px; flex: 1; }
 
@@ -682,6 +659,38 @@
     .found-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 20px; }
     .found-item label { display: block; font-size: 10.5px; font-weight: 700; color: var(--text-3); letter-spacing: .08em; margin-bottom: 2px; }
     .found-item span  { font-size: 14px; font-weight: 600; }
+
+    @media (max-width: 760px) {
+        :root { --sidebar-w: 72px; }
+
+        .sb-logo { justify-content: center; padding: 16px 10px; }
+        .sb-logo-icon { width: 40px; height: 40px; }
+        .sb-logo-text, .sb-group-label, .sb-user > div:nth-child(2),
+        .sb-footer { display: none; }
+        .sb-nav { padding: 10px 8px; }
+        .sb-item { justify-content: center; padding: 11px 8px; font-size: 0; }
+        .sb-item i { width: auto; font-size: 16px; }
+        .sb-user { padding: 12px 10px; }
+        .signout-btn { justify-content: center; padding: 9px 8px; font-size: 0; }
+        .signout-btn i { font-size: 13px; margin: 0; }
+        .topbar { padding: 0 16px; }
+        .topbar-left p { display: none; }
+        .page { padding: 20px 16px 36px; }
+        .stats-row { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 480px) {
+        #auth-screen { padding: 12px; }
+        .auth-card { max-width: 100%; }
+        .auth-header { padding: 24px 20px 20px; }
+        .auth-body { padding: 22px 20px 24px; }
+        .auth-footer { padding-left: 20px; padding-right: 20px; }
+        .topbar-right .btn { padding-left: 10px; padding-right: 10px; font-size: 0; }
+        .topbar-right .btn i { font-size: 13px; }
+        .form-grid { grid-template-columns: 1fr; }
+        .seg { flex-direction: column; }
+        .period-bar { flex-wrap: wrap; }
+    }
 
     @media print {
         .sidebar, .topbar, .btn-row, .period-bar, .card-hd .btn-row { display: none !important; }
