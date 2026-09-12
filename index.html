@@ -721,10 +721,10 @@
         </div>
 
         <div class="auth-tabs">
-            <button class="auth-tab active" id="tab-signin" type="button">
+            <button class="auth-tab active" id="tab-signin" onclick="switchTab('signin')">
                 <i class="fas fa-right-to-bracket"></i> Sign In
             </button>
-            <button class="auth-tab" id="tab-signup" type="button">
+            <button class="auth-tab" id="tab-signup" onclick="switchTab('signup')">
                 <i class="fas fa-user-plus"></i> Sign Up
             </button>
         </div>
@@ -749,13 +749,14 @@
                                onkeydown="if(event.key==='Enter')doSignIn()">
                     </div>
                 </div>
-                <button class="auth-btn" id="signin-btn" type="button">
+                <button class="auth-btn" id="signin-btn" onclick="doSignIn()">
                     <i class="fas fa-right-to-bracket"></i> Sign In
                 </button>
                 <div class="auth-divider">or</div>
                 <p style="text-align:center;font-size:13px;color:var(--text-3);">
                     No account yet?
-                    <a href="#" id="create-account-link" style="color:var(--blue);font-weight:600;">Create one </a>
+                    <a href="#" onclick="switchTab('signup');return false;"
+                       style="color:var(--blue);font-weight:600;">Create one </a>
                 </p>
             </div>
 
@@ -783,13 +784,14 @@
                                onkeydown="if(event.key==='Enter')doSignUp()">
                     </div>
                 </div>
-                <button class="auth-btn" id="signup-btn" type="button">
+                <button class="auth-btn" id="signup-btn" onclick="doSignUp()">
                     <i class="fas fa-user-plus"></i> Create Account
                 </button>
                 <div class="auth-divider">or</div>
                 <p style="text-align:center;font-size:13px;color:var(--text-3);">
                     Already have an account?
-                    <a href="#" id="sign-in-link" style="color:var(--blue);font-weight:600;">Sign in </a>
+                    <a href="#" onclick="switchTab('signin');return false;"
+                       style="color:var(--blue);font-weight:600;">Sign in </a>
                 </p>
             </div>
         </div>
@@ -1810,17 +1812,4 @@ function syncBadge() {
         `<i class="fas fa-users"></i> ${n} Employee${n!==1?'s':''}`;
 }
 
-document.getElementById('tab-signin').addEventListener('click', () => window.switchTab('signin'));
-document.getElementById('tab-signup').addEventListener('click', () => window.switchTab('signup'));
-document.getElementById('create-account-link').addEventListener('click', (event) => {
-    event.preventDefault();
-    window.switchTab('signup');
-});
-document.getElementById('sign-in-link').addEventListener('click', (event) => {
-    event.preventDefault();
-    window.switchTab('signin');
-});
-document.getElementById('signin-btn').addEventListener('click', () => window.doSignIn());
-document.getElementById('signup-btn').addEventListener('click', () => window.doSignUp());
-
-document.getElementById('pay-period').value = 'August 2026';
+document.getElementById('pay-period').value = 'August 2026'
