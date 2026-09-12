@@ -1149,19 +1149,6 @@ window.switchTab = (tab) => {
     document.getElementById('signup-msg').innerHTML = '';
 };
 
-document.getElementById('tab-signin').addEventListener('click', () => window.switchTab('signin'));
-document.getElementById('tab-signup').addEventListener('click', () => window.switchTab('signup'));
-document.getElementById('create-account-link').addEventListener('click', (event) => {
-    event.preventDefault();
-    window.switchTab('signup');
-});
-document.getElementById('sign-in-link').addEventListener('click', (event) => {
-    event.preventDefault();
-    window.switchTab('signin');
-});
-document.getElementById('signin-btn').addEventListener('click', () => window.doSignIn());
-document.getElementById('signup-btn').addEventListener('click', () => window.doSignUp());
-
 function authMsg(id, type, text) {
     const el = document.getElementById(id);
     const icon = type === 'ok' ? 'check-circle' : 'circle-xmark';
@@ -1822,5 +1809,18 @@ function syncBadge() {
     document.getElementById('emp-badge').innerHTML =
         `<i class="fas fa-users"></i> ${n} Employee${n!==1?'s':''}`;
 }
+
+document.getElementById('tab-signin').addEventListener('click', () => window.switchTab('signin'));
+document.getElementById('tab-signup').addEventListener('click', () => window.switchTab('signup'));
+document.getElementById('create-account-link').addEventListener('click', (event) => {
+    event.preventDefault();
+    window.switchTab('signup');
+});
+document.getElementById('sign-in-link').addEventListener('click', (event) => {
+    event.preventDefault();
+    window.switchTab('signin');
+});
+document.getElementById('signin-btn').addEventListener('click', () => window.doSignIn());
+document.getElementById('signup-btn').addEventListener('click', () => window.doSignUp());
 
 document.getElementById('pay-period').value = 'August 2026';
